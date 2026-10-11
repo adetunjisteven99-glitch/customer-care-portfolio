@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional customer support portfolio offering live chat, email support, e-commerce customer care, and complaint resolution.">
+  <title>Customer Support Expert | Oni Stephen Oluwaseun</title>
+  <style>
+    :root {
+      --navy: #10243a;
+      --blue: #2563eb;
+      --pale: #eff6ff;
+      --ink: #182230;
+      --muted: #5f6f82;
+      --white: #ffffff;
+      --line: #e5eaf1;
+      --green: #16a085;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #f8fafc;
+      line-height: 1.65;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1100px, 91%); margin: auto; }
+    header {
+      background: var(--white);
+      border-bottom: 1px solid var(--line);
+      position: sticky; top: 0; z-index: 10;
+    }
+    nav { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { font-size: 1.05rem; font-weight: 800; color: var(--navy); letter-spacing: -.3px; }
+    .brand span { color: var(--blue); }
+    .navlinks { display: flex; flex-wrap: wrap; gap: 22px; font-size: .92rem; color: #405166; }
+    .navlinks a:hover { color: var(--blue); }
+    .hero { padding: 88px 0 76px; background: linear-gradient(135deg, #eff6ff 0%, #ffffff 60%, #ecfdf5 100%); }
+    .hero-grid { display: grid; grid-template-columns: 1.3fr .7fr; gap: 54px; align-items: center; }
+    .eyebrow { display: inline-block; color: #1d4ed8; background: #dbeafe; padding: 7px 13px; border-radius: 999px; font-weight: 700; font-size: .8rem; letter-spacing: .4px; text-transform: uppercase; }
+    h1 { color: var(--navy); font-size: clamp(2.45rem, 5vw, 4.25rem); line-height: 1.08; letter-spacing: -2px; margin: 20px 0; }
+    h1 span { color: var(--blue); }
+    .lead { color: var(--muted); font-size: 1.12rem; max-width: 650px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 28px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 19px; border-radius: 10px; font-weight: 700; border: 1px solid transparent; transition: .2s; }
+    .btn-primary { background: var(--blue); color: white; box-shadow: 0 8px 20px #2563eb2b; }
+    .btn-primary:hover { background: #1d4ed8; transform: translateY(-1px); }
+    .btn-light { background: white; border-color: var(--line); color: var(--navy); }
+    .hero-card { background: white; border: 1px solid var(--line); border-radius: 22px; padding: 28px; box-shadow: 0 20px 50px #10243a12; }
+    .avatar { width: 68px; height: 68px; border-radius: 18px; display: grid; place-items: center; background: var(--navy); color: white; font-size: 1.7rem; font-weight: 800; margin-bottom: 20px; }
+    .hero-card h3 { margin: 0 0 7px; color: var(--navy); font-size: 1.3rem; }
+    .hero-card p { margin: 0; color: var(--muted); font-size: .95rem; }
+    .mini-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 24px; }
+    .stat { padding: 14px; background: #f8fafc; border-radius: 12px; }
+    .stat strong { display: block; color: var(--blue); font-size: 1.05rem; }
+    .stat small { color: var(--muted); }
+    section { padding: 76px 0; }
+    .section-head { max-width: 650px; margin-bottom: 32px; }
+    .kicker { color: var(--blue); font-weight: 800; text-transform: uppercase; font-size: .78rem; letter-spacing: 1.2px; }
+    h2 { font-size: clamp(1.9rem, 3vw, 2.65rem); line-height: 1.15; letter-spacing: -1px; color: var(--navy); margin: 10px 0 13px; }
+    .section-head p { color: var(--muted); margin: 0; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card { background: white; border: 1px solid var(--line); border-radius: 17px; padding: 24px; }
+    .icon { width: 46px; height: 46px; display: grid; place-items: center; border-radius: 13px; background: var(--pale); font-size: 1.35rem; margin-bottom: 16px; }
+    .card h3 { color: var(--navy); margin: 0 0 8px; font-size: 1.08rem; }
+    .card p { color: var(--muted); margin: 0; font-size: .94rem; }
+    .about { background: white; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .about-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 45px; align-items: start; }
+    .about-box { background: var(--navy); color: white; padding: 30px; border-radius: 20px; }
+    .about-box h3 { font-size: 1.45rem; margin: 0 0 10px; }
+    .about-box p { color: #d5e1ef; margin: 0; }
+    .checklist { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 0; list-style: none; margin: 23px 0 0; }
+    .checklist li { color: #34465b; padding-left: 26px; position: relative; }
+    .checklist li:before { content: "✓"; position: absolute; left: 0; color: var(--green); font-weight: 900; }
+    .samples { background: #f8fafc; }
+    .sample { border-top: 3px solid var(--blue); }
+    .label { font-size: .75rem; color: var(--blue); font-weight: 800; text-transform: uppercase; letter-spacing: .8px; }
+    .reply { background: #f8fafc; padding: 13px 15px; border-radius: 10px; margin-top: 13px; color: #334155; font-size: .92rem; }
+    .contact { background: var(--navy); color: white; }
+    .contact h2 { color: white; }
+    .contact .section-head p { color: #d5e1ef; }
+    .contact-panel { display: flex; align-items: center; justify-content: space-between; gap: 25px; flex-wrap: wrap; background: #ffffff12; border: 1px solid #ffffff25; border-radius: 18px; padding: 27px; }
+    .contact-panel p { margin: 5px 0 0; color: #d5e1ef; }
+    .contact .btn-light { border: 0; }
+    footer { background: #0b1929; color: #b9c6d5; padding: 22px 0; font-size: .86rem; }
+    footer .wrap { display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap; }
+    @media (max-width: 800px) {
+      .hero-grid, .about-grid { grid-template-columns: 1fr; gap: 30px; }
+      .hero { padding: 62px 0; }
+      .cards { grid-template-columns: repeat(2, 1fr); }
+      .navlinks { gap: 12px; font-size: .82rem; }
+    }
+    @media (max-width: 540px) {
+      nav { align-items: flex-start; padding: 17px 0; flex-direction: column; }
+      .navlinks { gap: 14px; }
+      section { padding: 58px 0; }
+      .cards, .checklist { grid-template-columns: 1fr; }
+      h1 { letter-spacing: -1px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="wrap">
+      <a class="brand" href="#home">Oni Stephen Oluwaseun<span>.</span></a>
+      <div class="navlinks">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#samples">Work Samples</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">Reliable • Helpful • Customer-first</span>
+          <h1>Great service starts with <span>being heard.</span></h1>
+          <p class="lead">I help businesses support their customers with clear communication, thoughtful problem-solving, and a professional experience across live chat, email, and e-commerce support.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#contact">Let's Work Together</a>
+            <a class="btn btn-light" href="#services">Explore My Services</a>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <div class="avatar">CC</div>
+          <h3>Customer Support Expert</h3>
+          <p>Professional support that helps customers feel informed, respected, and taken care of.</p>
+          <div class="mini-stats">
+            <div class="stat"><strong>Live Chat</strong><small>Fast, helpful replies</small></div>
+            <div class="stat"><strong>Email</strong><small>Clear communication</small></div>
+            <div class="stat"><strong>E-commerce</strong><small>Order and product help</small></div>
+            <div class="stat"><strong>Resolution</strong><small>Calm problem-solving</small></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">What I can help with</span>
+          <h2>Customer support that puts people first.</h2>
+          <p>Flexible support for businesses that want to communicate clearly, handle concerns professionally, and create a better customer experience.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="icon">💬</div><h3>Live Chat Support</h3><p>Respond to customer questions with a friendly, clear, and helpful tone.</p></article>
+          <article class="card"><div class="icon">✉️</div><h3>Email Support</h3><p>Write organized, professional responses to inquiries, requests, and follow-ups.</p></article>
+          <article class="card"><div class="icon">🛍️</div><h3>E-commerce Support</h3><p>Help customers with product questions, order updates, returns, and store policies.</p></article>
+          <article class="card"><div class="icon">🧩</div><h3>Complaint Resolution</h3><p>Listen carefully, acknowledge concerns, and guide customers toward appropriate next steps.</p></article>
+          <article class="card"><div class="icon">🤝</div><h3>Customer Relationships</h3><p>Use respectful communication and thoughtful follow-ups to build trust with customers.</p></article>
+          <article class="card"><div class="icon">📋</div><h3>Support Administration</h3><p>Organize customer requests, document issues, and escalate complex cases when needed.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="wrap about-grid">
+        <div class="about-box">
+          <h3>My approach</h3>
+          <p>Every customer deserves patience, respect, and a useful answer. I focus on understanding the issue first, communicating clearly, and following the business's policies and procedures.</p>
+        </div>
+        <div>
+          <span class="kicker">About me</span>
+          <h2>A calm, thoughtful voice for your customers.</h2>
+          <p style="color:var(--muted)">I’m building my career in customer care and am ready to bring a service-minded attitude, strong written communication, and a willingness to learn to a customer support team. I value professionalism, confidentiality, accurate information, and treating every customer with respect.</p>
+          <ul class="checklist">
+            <li>Clear written communication</li>
+            <li>Patient and empathetic service</li>
+            <li>Problem-solving mindset</li>
+            <li>Attention to detail</li>
+            <li>Professional follow-up</li>
+            <li>Willingness to learn new tools</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="samples" id="samples">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Demonstration work</span>
+          <h2>Examples of customer conversations.</h2>
+          <p>These are sample responses created to demonstrate my communication style, not real client testimonials or completed client projects.</p>
+        </div>
+        <div class="cards">
+          <article class="card sample">
+            <span class="label">Order inquiry</span>
+            <h3>Customer asks about a delayed order</h3>
+            <p><strong>Customer:</strong> “My order hasn’t arrived yet. Can you help?”</p>
+            <div class="reply"><strong>Sample reply:</strong> “I’m sorry your order hasn’t arrived as expected. I can help check the status. Please share your order number, and I’ll review the available tracking information and explain the next steps.”</div>
+          </article>
+          <article class="card sample">
+            <span class="label">Complaint handling</span>
+            <h3>Customer is unhappy with a product</h3>
+            <p><strong>Customer:</strong> “I’m disappointed with what I received.”</p>
+            <div class="reply"><strong>Sample reply:</strong> “I’m sorry the product didn’t meet your expectations. I’d like to understand what happened and help you review the options available under our return or exchange policy.”</div>
+          </article>
+          <article class="card sample">
+            <span class="label">Product question</span>
+            <h3>Customer needs more information</h3>
+            <p><strong>Customer:</strong> “Is this item available in another size?”</p>
+            <div class="reply"><strong>Sample reply:</strong> “Thanks for your interest! I can help you check the available sizes. Could you tell me which size you’re looking for? I’ll guide you based on the current product information.”</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker" style="color:#93c5fd">Get in touch</span>
+          <h2>Looking for dependable customer support?</h2>
+          <p>I’m open to customer care opportunities, remote support roles, and working with online businesses.</p>
+        </div>
+        <div class="contact-panel">
+          <div>
+            <strong style="font-size:1.2rem">Oni Stephen Oluwaseun</strong>
+            <p>Email: akinyemistephen966@gmail.com</p>
+            <p>Location: Nigeria • Available for remote opportunities</p>
+          </div>
+          <a class="btn btn-light" href="mailto:akinyemistephen966@gmail.com?subject=Customer%20Support%20Opportunity">Contact Me by Email</a>
+        </div>
+        <p style="font-size:.82rem;color:#b9c6d5;margin-top:15px">Before publishing, replace “Oni Stephen Oluwaseun” and the example email with your own details.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© <span id="year"></span> Oni Stephen Oluwaseun. Customer Support Portfolio.</span>
+      <span>Professional service. Clear communication. Customer-first support.</span>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
